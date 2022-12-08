@@ -1,5 +1,5 @@
 {
-  "name": "ethereum-ens-batch",
+  "name": "ens-batch-ethers",
   "version": "0.0.1",
   "description": "Batch ENS name lookups.",
   "typings": "dist/index.d.ts",
