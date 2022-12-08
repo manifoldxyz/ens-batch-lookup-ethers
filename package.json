@@ -1,5 +1,5 @@
 {
-  "name": "ens-batch-ethers",
+  "name": "ens-batch-lookup-ethers",
   "version": "0.0.1",
   "description": "Batch ENS name lookups.",
   "typings": "dist/index.d.ts",
