@@ -34,7 +34,6 @@
   "dependencies": {
     "@ethersproject/address": "^5.7.0",
     "@ethersproject/contracts": "^5.7.0",
-    "@ethersproject/hash": "^5.7.0",
     "@ethersproject/providers": "^5.7.2",
     "@types/node": "^18.11.11",
     "typescript": "^4.9.3"

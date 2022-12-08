@@ -1,91 +1,20 @@
-export const BATCH_LOOKUP_ADDRESS_MAP = {
-  5: '0xB4c2551A9972c72AE46629Dcf871F6C3A35F1eF3',
+export const REVERSE_RECORDS_ADDRESS_MAP = {
+  1: '0x3671aE578E63FdF66ad4F3E12CC0c0d71Ac7510C',
+  3: '0x72c33B247e62d0f1927E8d325d0358b8f9971C68',
+  4: '0x196eC7109e127A353B709a20da25052617295F6f',
+  5: '0x333Fc8f550043f239a2CF79aEd5e9cF4A20Eb41e',
 };
 
-export const BATCH_LOOKUP_ABI = [
+export const REVERSE_RECORDS_ABI = [
   {
-    inputs: [
-      {
-        components: [
-          {
-            internalType: 'address',
-            name: 'resolver',
-            type: 'address',
-          },
-          {
-            internalType: 'bytes32',
-            name: 'nameHash',
-            type: 'bytes32',
-          },
-        ],
-        internalType: 'struct BatchENSLookup.AddrLookup[]',
-        name: 'lookups',
-        type: 'tuple[]',
-      },
-    ],
-    name: 'addrs',
-    outputs: [
-      {
-        internalType: 'address[]',
-        name: 'result',
-        type: 'address[]',
-      },
-    ],
-    stateMutability: 'view',
-    type: 'function',
+    inputs: [{ internalType: 'contract ENS', name: '_ens', type: 'address' }],
+    stateMutability: 'nonpayable',
+    type: 'constructor',
   },
   {
-    inputs: [
-      {
-        components: [
-          {
-            internalType: 'address',
-            name: 'resolver',
-            type: 'address',
-          },
-          {
-            internalType: 'bytes32',
-            name: 'reverseAddressHash',
-            type: 'bytes32',
-          },
-        ],
-        internalType: 'struct BatchENSLookup.NameLookup[]',
-        name: 'lookups',
-        type: 'tuple[]',
-      },
-    ],
-    name: 'names',
-    outputs: [
-      {
-        internalType: 'string[]',
-        name: 'result',
-        type: 'string[]',
-      },
-    ],
-    stateMutability: 'view',
-    type: 'function',
-  },
-  {
-    inputs: [
-      {
-        internalType: 'address',
-        name: 'ensRegistry',
-        type: 'address',
-      },
-      {
-        internalType: 'bytes32[]',
-        name: 'hashes',
-        type: 'bytes32[]',
-      },
-    ],
-    name: 'resolvers',
-    outputs: [
-      {
-        internalType: 'address[]',
-        name: 'result',
-        type: 'address[]',
-      },
-    ],
+    inputs: [{ internalType: 'address[]', name: 'addresses', type: 'address[]' }],
+    name: 'getNames',
+    outputs: [{ internalType: 'string[]', name: 'r', type: 'string[]' }],
     stateMutability: 'view',
     type: 'function',
   },
