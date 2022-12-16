@@ -1,9 +1,12 @@
 import { getAddress } from '@ethersproject/address';
 import { Contract } from '@ethersproject/contracts';
-import { Provider } from '@ethersproject/providers';
+import { BaseProvider } from '@ethersproject/providers';
 import { REVERSE_RECORDS_ABI, REVERSE_RECORDS_ADDRESS_MAP } from './constants';
 
-export async function lookupAddresses(provider: Provider, addresses: string[] | Promise<string[]>) {
+export async function lookupAddresses(
+  provider: BaseProvider,
+  addresses: string[] | Promise<string[]>
+) {
   const network = await provider.getNetwork();
   const reverseRecordsAddress = REVERSE_RECORDS_ADDRESS_MAP[network.chainId];
 
