@@ -1,6 +1,6 @@
 {
   "name": "@manifoldxyz/ens-batch-lookup-ethers",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Batch ENS name lookups.",
   "typings": "dist/index.d.ts",
   "main": "dist/index.js",
