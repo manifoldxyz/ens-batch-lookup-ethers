@@ -13,9 +13,6 @@
     "lint": "eslint --ext .ts,.js ./src/**/*",
     "lint-fix": "eslint --ext .ts ./src/**/* --fix"
   },
-  "publishConfig": {
-    "access": "public"
-  },
   "files": [
     "dist/**/*",
     "src/**/*"
