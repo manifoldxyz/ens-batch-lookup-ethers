@@ -19,3 +19,27 @@ export const REVERSE_RECORDS_ABI = [
     type: 'function',
   },
 ];
+
+/**
+ * The ENS registry. Same address on every network ENS is deployed to.
+ */
+export const ENS_REGISTRY_ADDRESS = '0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e';
+
+export const ENS_REGISTRY_ABI = ['function resolver(bytes32 node) view returns (address)'];
+
+/**
+ * ENSIP-10 wildcard resolution, used to reach the `default.reverse` namespace.
+ */
+export const EXTENDED_RESOLVER_ABI = [
+  'function resolve(bytes name, bytes data) view returns (bytes)',
+];
+
+export const NAME_RESOLVER_ABI = ['function name(bytes32 node) view returns (string)'];
+
+/**
+ * Parent node owning the ENSIP-10 wildcard resolver for the reverse namespaces.
+ *
+ * Note this is `reverse`, NOT `default.reverse` — the latter has no resolver of its own in
+ * the registry and returns the zero address.
+ */
+export const REVERSE_NODE_NAME = 'reverse';

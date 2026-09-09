@@ -1,6 +1,6 @@
 {
   "name": "@manifoldxyz/ens-batch-lookup-ethers",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Batch ENS name lookups.",
   "typings": "dist/index.d.ts",
   "main": "dist/index.js",
@@ -32,8 +32,11 @@
     "vue-eslint-parser": "^8.0.1"
   },
   "dependencies": {
+    "@ethersproject/abi": "^5.7.0",
     "@ethersproject/address": "^5.7.0",
+    "@ethersproject/constants": "^5.7.0",
     "@ethersproject/contracts": "^5.7.0",
+    "@ethersproject/hash": "^5.7.0",
     "@ethersproject/providers": "^5.7.2",
     "@types/node": "^18.11.11",
     "typescript": "^4.9.3"
