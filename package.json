@@ -1,6 +1,6 @@
 {
   "name": "@manifoldxyz/ens-batch-lookup-ethers",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Batch ENS name lookups.",
   "typings": "dist/index.d.ts",
   "main": "dist/index.js",
@@ -8,6 +8,7 @@
   "license": "MIT",
   "scripts": {
     "build": "rm -rf dist && tsc",
+    "prepublishOnly": "npm run build",
     "eslint": "eslint --ext .ts,.js ./src/**/*",
     "lint": "eslint --ext .ts,.js ./src/**/*",
     "lint-fix": "eslint --ext .ts ./src/**/* --fix"
